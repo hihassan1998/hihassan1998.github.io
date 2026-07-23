@@ -83,7 +83,7 @@ const cardEnter = {
 };
 
 export default function Projects() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [showAll, setShowAll] = useState(false);
   const labels = t.projects;
 
