@@ -16,7 +16,7 @@ function ProjectCard({ project, spotlight = false, labels }) {
   return (
     <motion.article
       layout
-      className={`panel-hover p-7 sm:p-9 ${spotlight ? 'lg:p-10' : ''}`}
+      className={`panel-hover w-full p-7 sm:p-9 ${spotlight ? 'lg:p-10' : ''}`}
       whileHover={{ y: -6 }}
       transition={spring.smooth}
     >
@@ -120,6 +120,7 @@ export default function Projects() {
               <motion.div
                 key={project.id}
                 layout
+                className="w-full"
                 {...cardEnter}
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               >
