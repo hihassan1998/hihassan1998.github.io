@@ -5,7 +5,8 @@ export const personal = {
   location: 'Luleå, Norrbotten, Sweden',
   github: 'https://github.com/hihassan1998',
   linkedin: 'https://www.linkedin.com/in/hassan-hussain-3b840429a/',
-  cvUrl: '/cv/Hassan_Hussain_CV.pdf',
+  cvEn: '/cv/Hassan_Hussain_CV___ENG.pdf',
+  cvSv: '/cv/Hassan_Hussain_CV___SWE.pdf',
   image: '/profile.jpeg',
 };
 
@@ -360,9 +361,11 @@ export const featuredProjects = [
   {
     id: 'anotherai',
     title: 'anotherAI',
-    subtitle: 'AI Legal Tech SaaS',
-    description:
-      'Embeddable AI assistant for legal websites with admin dashboard, case intake, and automated client communication. Full product lifecycle from architecture to launch.',
+    subtitle: { en: 'AI Legal Tech SaaS', sv: 'AI Legal Tech SaaS' },
+    description: {
+      en: 'Embeddable AI assistant for legal websites with admin dashboard, case intake, and automated client communication. Full product lifecycle from architecture to launch.',
+      sv: 'Inbäddad AI-assistent för juridiska webbplatser med administratörspanel, ärendehantering och automatiserad kundkommunikation. Hela produktlivscykeln från arkitektur till lansering.'
+    },
     tags: ['React', 'AI/LLM', 'SaaS', 'REST API', 'OpenAI'],
     live: 'https://anotheraiplatform.com/',
     github: 'https://github.com/hihassan1998',
@@ -370,19 +373,35 @@ export const featuredProjects = [
   {
     id: 'legal-widget',
     title: 'Legal AI Intake Agent',
-    subtitle: 'Embeddable Widget',
-    description:
-      'Script-based widget for law firms — captures inquiries, generates AI summaries, and automates email workflows in English and Swedish.',
+    subtitle: { en: 'Embeddable Widget', sv: 'Inbäddad widget' },
+    description: {
+      en: 'Script-based widget for law firms — captures inquiries, generates AI summaries, and automates email workflows in English and Swedish.',
+      sv: 'Skriptbaserad widget för advokatbyråer — samlar in förfrågningar, genererar AI-sammanfattningar och automatiserar e-postflöden på engelska och svenska.'
+    },
     tags: ['JavaScript', 'AI', 'Widget', 'Multilingual'],
     live: 'https://anotheraiplatform.com/',
     github: 'https://github.com/hihassan1998',
   },
   {
+    id: 'ai-business-discovery',
+    title: 'AI Business Discovery Assistant',
+    subtitle: { en: 'Generative AI Discovery Tool', sv: 'Generativt AI-upptäcktsverktyg' },
+    description: {
+      en: 'Generative AI discovery tool — interactive chat that gathers stakeholder requirements, produces multilingual structured reports, and visualizes effort estimates.',
+      sv: 'Generativt AI-upptäcktsverktyg — interaktiv chatt som samlar intressentkrav, producerar flerspråkiga strukturerade rapporter och visar tidsuppskattningar.'
+    },
+    tags: ['TypeScript', 'React', 'Next.js', 'Multilingual'],
+    live: 'https://ai-business-discovery-assistant.vercel.app/',
+    github: 'https://github.com/hihassan1998/ai-business-discovery-assistant',
+  },
+  {
     id: 'technotes',
     title: 'TechNotes',
-    subtitle: 'MERN Notes App',
-    description:
-      'Full-stack note-taking with authentication, user roles, and CRUD — built to replace sticky notes at a tech retail business.',
+    subtitle: { en: 'MERN Notes App', sv: 'MERN anteckningsapp' },
+    description: {
+      en: 'Full-stack note-taking with authentication, user roles, and CRUD — built to replace sticky notes at a tech retail business.',
+      sv: 'Fullstack-applikation för anteckningar med autentisering, användarroller och CRUD — byggd för att ersätta papperslappar hos en teknikbutik.'
+    },
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Auth'],
     live: 'https://technotes-99q4.onrender.com/',
     github: 'https://github.com/hihassan1998',
@@ -390,9 +409,11 @@ export const featuredProjects = [
   {
     id: 'bilhub',
     title: 'BilHub',
-    subtitle: 'Car Showcase · Next.js',
-    description:
-      'SSR car exploration platform with filtering, pagination, TypeScript, and SEO-optimized metadata.',
+    subtitle: { en: 'Car Showcase · Next.js', sv: 'Bilsajt · Next.js' },
+    description: {
+      en: 'SSR car exploration platform with filtering, pagination, TypeScript, and SEO-optimized metadata.',
+      sv: 'SSR-plattform för bilsökning med filtrering, paginering, TypeScript och SEO-optimerad metadata.'
+    },
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'SSR', 'SEO'],
     live: 'https://bilhub.onrender.com/',
     github: 'https://github.com/hihassan1998',
@@ -400,9 +421,11 @@ export const featuredProjects = [
   {
     id: 'collabwrite',
     title: 'CollabWrite',
-    subtitle: 'Cloud Document Editor',
-    description:
-      'Google Docs-inspired editor with cloud persistence, rich text formatting, and real-time collaborative sessions.',
+    subtitle: { en: 'Cloud Document Editor', sv: 'Molndokumentredigerare' },
+    description: {
+      en: 'Google Docs-inspired editor with cloud persistence, rich text formatting, and real-time collaborative sessions.',
+      sv: 'Google Docs-inspirerad redigerare med molnlagring, rik textformatering och samarbete i realtid.'
+    },
     tags: ['React', 'Node.js', 'WebSockets', 'Cloud'],
     live: null,
     github: 'https://github.com/group-mh/ssr-editor-frontend',
@@ -410,9 +433,11 @@ export const featuredProjects = [
   {
     id: 'swestate',
     title: 'SwEstate',
-    subtitle: 'Real Estate · MERN',
-    description:
-      'Property listings with user auth, live chat, image galleries, and map integration for location services.',
+    subtitle: { en: 'Real Estate · MERN', sv: 'Fastighetssajt · MERN' },
+    description: {
+      en: 'Property listings with user auth, live chat, image galleries, and map integration for location services.',
+      sv: 'Fastighetsannonser med användarautentisering, livechatt, bildgallerier och kartintegration för platstjänster.'
+    },
     tags: ['React', 'Node.js', 'MongoDB', 'Maps'],
     live: null,
     github: 'https://github.com/hihassan1998',
@@ -420,9 +445,11 @@ export const featuredProjects = [
   {
     id: 'elspark',
     title: 'ElSpark',
-    subtitle: 'E-bike Rental',
-    description:
-      'Full-stack rental platform with real-time availability, booking management, and responsive UI.',
+    subtitle: { en: 'E-bike Rental', sv: 'Elsparkcykeluthyrning' },
+    description: {
+      en: 'Full-stack rental platform with real-time availability, booking management, and responsive UI.',
+      sv: 'Fullstack-uthyrningsplattform för elsparkcyklar med tillgänglighet i realtid, bokningshantering och responsivt gränssnitt.'
+    },
     tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
     live: null,
     github: 'https://github.com/hihassan1998',
@@ -430,9 +457,11 @@ export const featuredProjects = [
   {
     id: 'car-dealership',
     title: 'Car Dealership App',
-    subtitle: 'Full-Stack · Docker',
-    description:
-      'Containerized dealership platform with dealer listings, reviews, user management, and CI/CD pipeline.',
+    subtitle: { en: 'Full-Stack · Docker', sv: 'Fullstack · Docker' },
+    description: {
+      en: 'Containerized dealership platform with dealer listings, reviews, user management, and CI/CD pipeline.',
+      sv: 'Containeriserad bilhandelsplattform med återförsäljarlistor, recensioner, användarhantering och CI/CD-pipeline.'
+    },
     tags: ['Node.js', 'Docker', 'MongoDB', 'React'],
     live: null,
     github: 'https://github.com/hihassan1998',
@@ -440,9 +469,11 @@ export const featuredProjects = [
   {
     id: 'ai-summarizer',
     title: 'AI Summarizer',
-    subtitle: 'Article Processing',
-    description:
-      'Paste a URL, get an AI-generated summary — clean UX for content processing and API integration.',
+    subtitle: { en: 'Article Processing', sv: 'Artikelbearbetning' },
+    description: {
+      en: 'Paste a URL, get an AI-generated summary — clean UX for content processing and API integration.',
+      sv: 'Klistra in en URL och få en AI-genererad sammanfattning — rent gränssnitt för innehållsbearbetning och API-integration.'
+    },
     tags: ['React', 'AI API', 'JavaScript'],
     live: 'https://ai-summarizer-5v1r.onrender.com/',
     github: 'https://github.com/hihassan1998',
@@ -450,9 +481,11 @@ export const featuredProjects = [
   {
     id: 'ludviga',
     title: 'Ludviga & Co',
-    subtitle: 'Law Firm · Pico CMS',
-    description:
-      'Flat-file CMS site for legal advisors — lightweight, WCAG-compliant, and SEO-optimized.',
+    subtitle: { en: 'Law Firm · Pico CMS', sv: 'Juristbyrå · Pico CMS' },
+    description: {
+      en: 'Flat-file CMS site for legal advisors — lightweight, WCAG-compliant, and SEO-optimized.',
+      sv: 'Flat-file CMS-webbplats för juridiska rådgivare — lättviktig, WCAG-kompatibel och SEO-optimerad.'
+    },
     tags: ['Pico CMS', 'PHP', 'WCAG', 'SEO'],
     live: 'https://ludvigaandco.onrender.com/',
     github: 'https://github.com/hihassan1998',
@@ -460,9 +493,11 @@ export const featuredProjects = [
   {
     id: 'bmo',
     title: 'BMO Museum',
-    subtitle: 'Online Museum',
-    description:
-      'Museum web app for burial ritual artifacts with gallery navigation and accessible UX.',
+    subtitle: { en: 'Online Museum', sv: 'Webbmuseum' },
+    description: {
+      en: 'Museum web app for burial ritual artifacts with gallery navigation and accessible UX.',
+      sv: 'Museum-webbapp för begravningsritualer och artefakter med gallerinavigering och tillgänglig design.'
+    },
     tags: ['PHP', 'SQLite', 'Responsive'],
     live: 'https://online-bmo.onrender.com/',
     github: 'https://github.com/hihassan1998',
@@ -472,25 +507,37 @@ export const featuredProjects = [
 export const moreProjects = [
   {
     title: 'J-Hunt',
-    description: 'React Native job search app aggregating listings from LinkedIn, Indeed, and more.',
+    description: {
+      en: 'React Native job search app aggregating listings from LinkedIn, Indeed, and more.',
+      sv: 'React Native-app för jobbsökning som samlar annonser från LinkedIn, Indeed med flera.'
+    },
     tags: ['React Native', 'Expo', 'API'],
     github: 'https://github.com/hihassan1998/react_native_jobs',
   },
   {
     title: '8 Fingers 2 Thumbs',
-    description: 'Python CLI typing test game with difficulty levels and progress tracking.',
+    description: {
+      en: 'Python CLI typing test game with difficulty levels and progress tracking.',
+      sv: 'Python CLI-skrivtestspel med svårighetsgrader och framstegsspårning.'
+    },
     tags: ['Python', 'CLI'],
     github: 'https://github.com/hihassan1998',
   },
   {
     title: 'SeMash Restaurant',
-    description: 'Online restaurant web app with PHP backend and SQLite database.',
+    description: {
+      en: 'Online restaurant web app with PHP backend and SQLite database.',
+      sv: 'Restaurangwebbapp med PHP-backend och SQLite-databas.'
+    },
     tags: ['PHP', 'SQLite'],
     live: 'https://swemash-pakspice.onrender.com/public/pages/home.php',
   },
   {
     title: 'NLP Emotion Detector',
-    description: 'IBM Watson-powered emotion detection using natural language processing.',
+    description: {
+      en: 'IBM Watson-powered emotion detection using natural language processing.',
+      sv: 'Känslodetektering driven av IBM Watson med naturlig språkbearbetning.'
+    },
     tags: ['Python', 'IBM Watson', 'NLP'],
     github: 'https://github.com/hihassan1998/watson_ai',
   },

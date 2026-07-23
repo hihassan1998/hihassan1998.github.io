@@ -29,7 +29,7 @@ export default function Education() {
         >
           {t.education.items.map((item, i) => (
             <motion.div
-              key={item.school}
+              key={i}
               className="panel-hover p-6 sm:p-7"
               variants={fadeUp}
               custom={i}

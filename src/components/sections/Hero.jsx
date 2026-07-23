@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Download } from 'lucide-react';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { useLanguage } from '../../context/LanguageContext';
@@ -12,6 +12,7 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const [cvDropdownOpen, setCvDropdownOpen] = useState(false);
 
   const { scrollY } = useScroll();
   const imageY = useTransform(scrollY, [0, 500], [0, 80]);
@@ -41,6 +42,13 @@ export default function Hero() {
     );
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentRole, roles.length]);
+
+  useEffect(() => {
+    if (!cvDropdownOpen) return;
+    const close = () => setCvDropdownOpen(false);
+    window.addEventListener('click', close);
+    return () => window.removeEventListener('click', close);
+  }, [cvDropdownOpen]);
 
   return (
     <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
@@ -102,12 +110,48 @@ export default function Hero() {
                   <ArrowDown size={16} />
                 </a>
               </Magnetic>
-              <Magnetic strength={0.12}>
-                <a href={personal.cvUrl} download className="btn-ghost">
-                  <Download size={16} />
-                  {t.hero.cv}
-                </a>
-              </Magnetic>
+              <div className="relative">
+                <Magnetic strength={0.12}>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCvDropdownOpen(!cvDropdownOpen);
+                    }}
+                    className="btn-ghost flex items-center gap-2 cursor-pointer"
+                  >
+                    <Download size={16} />
+                    {t.hero.cv}
+                  </button>
+                </Magnetic>
+                <AnimatePresence>
+                  {cvDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute left-0 mt-2 w-48 rounded-xl border border-border bg-bg/95 backdrop-blur-xl p-1.5 shadow-xl z-20"
+                    >
+                      <a
+                        href={personal.cvEn}
+                        download
+                        onClick={() => setCvDropdownOpen(false)}
+                        className="flex items-center gap-2 w-full px-3 py-2 text-xs text-left font-mono rounded-lg text-fg-muted hover:text-white hover:bg-white/5 transition-colors"
+                      >
+                        English Version (EN)
+                      </a>
+                      <a
+                        href={personal.cvSv}
+                        download
+                        onClick={() => setCvDropdownOpen(false)}
+                        className="flex items-center gap-2 w-full px-3 py-2 text-xs text-left font-mono rounded-lg text-fg-muted hover:text-white hover:bg-white/5 transition-colors"
+                      >
+                        Swedish Version (SV)
+                      </a>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
               <div className="flex gap-3 ml-2">
                 <a href={personal.github} target="_blank" rel="noreferrer" className="p-2.5 rounded-xl border border-border text-fg-muted hover:text-accent hover:border-accent/40 transition-all">
                   <FaGithub size={18} />

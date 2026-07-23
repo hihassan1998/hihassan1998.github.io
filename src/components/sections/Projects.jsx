@@ -8,7 +8,10 @@ import SectionHeader from '../ui/SectionHeader';
 import { spring } from '../../lib/motion';
 
 function ProjectCard({ project, spotlight = false, labels }) {
+  const { lang } = useLanguage();
   const primaryUrl = project.live || project.github;
+  const subtitle = typeof project.subtitle === 'object' ? project.subtitle[lang] : project.subtitle;
+  const description = typeof project.description === 'object' ? project.description[lang] : project.description;
 
   return (
     <motion.article
@@ -19,7 +22,7 @@ function ProjectCard({ project, spotlight = false, labels }) {
     >
       <div className="flex items-start justify-between gap-4 mb-4">
         <div>
-          <p className="font-mono text-[10px] text-accent/80 mb-2 uppercase tracking-widest">{project.subtitle}</p>
+          <p className="font-mono text-[10px] text-accent/80 mb-2 uppercase tracking-widest">{subtitle}</p>
           {primaryUrl ? (
             <a
               href={primaryUrl}
@@ -49,7 +52,7 @@ function ProjectCard({ project, spotlight = false, labels }) {
       </div>
 
       <p className={`text-fg-muted leading-relaxed mb-6 ${spotlight ? 'text-base max-w-2xl' : 'text-sm max-w-lg'}`}>
-        {project.description}
+        {description}
       </p>
 
       <div className="flex flex-wrap items-center gap-2">
@@ -164,7 +167,7 @@ export default function Projects() {
                 >
                   <span>
                     <span className="text-white font-medium font-display">{p.title}</span>
-                    <span className="hidden sm:inline text-fg-muted"> — {p.description}</span>
+                    <span className="hidden sm:inline text-fg-muted"> — {typeof p.description === 'object' ? p.description[lang] : p.description}</span>
                   </span>
                   <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 text-accent transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
