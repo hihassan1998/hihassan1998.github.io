@@ -395,6 +395,18 @@ export const featuredProjects = [
     github: 'https://github.com/hihassan1998/ai-business-discovery-assistant',
   },
   {
+    id: 'anotool',
+    title: 'AnoTool',
+    subtitle: { en: 'Utility Toolkit', sv: 'Verktygslåda' },
+    description: {
+      en: 'Privacy-focused online utility toolkit featuring conversion, calculation, and formatting tools. Processes data entirely locally in the client browser.',
+      sv: 'Integritetsfokuserad verktygslåda online med konverterings-, beräknings- och formateringsverktyg. Behandlar all data helt lokalt i webbläsaren.'
+    },
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'SEO'],
+    live: 'https://anotool.com',
+    github: 'https://github.com/hihassan1998',
+  },
+  {
     id: 'technotes',
     title: 'TechNotes',
     subtitle: { en: 'MERN Notes App', sv: 'MERN anteckningsapp' },
