@@ -44,8 +44,8 @@ export const content = {
       ],
       highlights: [
         { label: 'Experience', value: '3+ years' },
-        { label: 'Projects', value: '15+' },
-        { label: 'Certifications', value: '10+' },
+        { label: 'Projects', value: '21+' },
+        { label: 'Certifications', value: '13+' },
         { label: 'Languages', value: '4 fluent' },
       ],
     },
@@ -55,6 +55,15 @@ export const content = {
       showOther: 'Other experience',
       hideOther: 'Hide other experience',
       items: [
+        {
+          role: 'DevOps Engineer',
+          company: 'Visar Systems AB',
+          period: 'Oct 2026 – Present',
+          type: 'Part-time',
+          description:
+            'Building CI/CD pipelines and reproducible Docker/mkosi test environments for DeeDee Linux in high-security environments, automating releases and ISO/CE compliance verification.',
+          tags: ['CI/CD', 'Docker', 'Linux/Debian', 'DevOps', 'Security', 'Systemd'],
+        },
         {
           role: 'Founder & Developer',
           company: 'anotherAI',
@@ -90,6 +99,26 @@ export const content = {
           description:
             'Manufacturing role with quality assurance and ABB IRC5 robotic systems support — demonstrates discipline, precision, and technical aptitude outside software.',
           tags: ['Robotics', 'Quality'],
+          minimal: true,
+        },
+        {
+          role: 'Community Guide (Volunteering)',
+          company: 'Red Cross (Röda Korset)',
+          period: 'Nov 2016 – Jul 2019',
+          type: 'Volunteer',
+          description:
+            'Served as a primary point of contact and mentor supporting the integration of newcomers into Swedish society.',
+          tags: ['Volunteering', 'Social Services', 'Integration'],
+          minimal: true,
+        },
+        {
+          role: 'Administrative Assistant',
+          company: 'Qureshi Vocational School',
+          period: 'Jan 2013 – Jul 2016',
+          type: 'Part-time',
+          description:
+            'Assisted school leadership with administrative workflows, documentation, and fundraising initiatives.',
+          tags: ['Administration', 'Education', 'Fundraising'],
           minimal: true,
         },
       ],
@@ -216,8 +245,8 @@ export const content = {
       ],
       highlights: [
         { label: 'Erfarenhet', value: '3+ år' },
-        { label: 'Projekt', value: '15+' },
-        { label: 'Certifieringar', value: '10+' },
+        { label: 'Projekt', value: '21+' },
+        { label: 'Certifieringar', value: '13+' },
         { label: 'Språk', value: '4 flytande' },
       ],
     },
@@ -227,6 +256,15 @@ export const content = {
       showOther: 'Övrig erfarenhet',
       hideOther: 'Dölj övrig erfarenhet',
       items: [
+        {
+          role: 'DevOps Engineer',
+          company: 'Visar Systems AB',
+          period: 'Okt 2026 – Pågående',
+          type: 'Deltid',
+          description:
+            'Bygger CI/CD-pipelines och reproducerbara Docker/mkosi-testmiljöer för DeeDee Linux i högsäkerhetsmiljöer, samt automatiserar releaser och ISO/CE-certifieringsunderlag.',
+          tags: ['CI/CD', 'Docker', 'Linux/Debian', 'DevOps', 'Säkerhet', 'Systemd'],
+        },
         {
           role: 'Grundare & Utvecklare',
           company: 'anotherAI',
@@ -262,6 +300,26 @@ export const content = {
           description:
             'Tillverkningsroll med kvalitetssäkring och stöd för ABB IRC5-robotar — visar disciplin, precision och teknisk förmåga utanför mjukvara.',
           tags: ['Robotik', 'Kvalitet'],
+          minimal: true,
+        },
+        {
+          role: 'Samhällsguide (Volontärarbete)',
+          company: 'Röda Korset',
+          period: 'Nov 2016 – Jul 2019',
+          type: 'Volontär',
+          description:
+            'Var en kontakt och mentor för nyanländas integration i det svenska samhället.',
+          tags: ['Volontärarbete', 'Socialt arbete', 'Integration'],
+          minimal: true,
+        },
+        {
+          role: 'Administrativ assistent',
+          company: 'Qureshi Vocational School',
+          period: 'Jan 2013 – Jul 2016',
+          type: 'Deltid',
+          description:
+            'Hjälpte skolans ledning med administrativt arbete, dokumentation och insamlingar.',
+          tags: ['Administration', 'Utbildning', 'Insamling'],
           minimal: true,
         },
       ],
